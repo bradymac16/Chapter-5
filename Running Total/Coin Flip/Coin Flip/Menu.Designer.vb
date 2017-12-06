@@ -27,6 +27,7 @@ Partial Class Menu
         Me.btnCoinToss = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnRace = New System.Windows.Forms.Button()
+        Me.btnDistanceCalculator = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnRock
@@ -74,11 +75,21 @@ Partial Class Menu
         Me.btnRace.Text = "Race"
         Me.btnRace.UseVisualStyleBackColor = True
         '
+        'btnDistanceCalculator
+        '
+        Me.btnDistanceCalculator.Location = New System.Drawing.Point(99, 193)
+        Me.btnDistanceCalculator.Name = "btnDistanceCalculator"
+        Me.btnDistanceCalculator.Size = New System.Drawing.Size(104, 23)
+        Me.btnDistanceCalculator.TabIndex = 5
+        Me.btnDistanceCalculator.Text = "Distance Calulator"
+        Me.btnDistanceCalculator.UseVisualStyleBackColor = True
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.Controls.Add(Me.btnDistanceCalculator)
         Me.Controls.Add(Me.btnRace)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnCoinToss)
@@ -94,4 +105,5 @@ Partial Class Menu
     Friend WithEvents btnCoinToss As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents btnRace As System.Windows.Forms.Button
+    Friend WithEvents btnDistanceCalculator As System.Windows.Forms.Button
 End Class

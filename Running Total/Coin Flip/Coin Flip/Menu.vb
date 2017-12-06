@@ -22,4 +22,13 @@
 
     Private Sub btnCoinToss_Click(sender As Object, e As EventArgs) Handles btnCoinToss.Click
     End Sub
+
+    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnDistanceCalculator.Click
+        Dim Box = New Distance_Calculator
+        Box.Show()
+    End Sub
 End Class
