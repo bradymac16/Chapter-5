@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Coin_Flip.Distance_Calculator
+            Me.MainForm = Global.Coin_Flip.Menu
         End Sub
     End Class
 End Namespace

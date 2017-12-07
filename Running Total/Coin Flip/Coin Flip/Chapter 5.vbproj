@@ -85,6 +85,12 @@
     <Compile Include="Distance Calculator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Population Calculator.Designer.vb">
+      <DependentUpon>Population Calculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Population Calculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RaceingForm.Designer.vb">
       <DependentUpon>RaceingForm.vb</DependentUpon>
     </Compile>
@@ -101,6 +107,12 @@
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Randm Number Game.Designer.vb">
+      <DependentUpon>Randm Number Game.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Randm Number Game.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RockPaperScissors.Designer.vb">
@@ -137,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Distance Calculator.resx">
       <DependentUpon>Distance Calculator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Population Calculator.resx">
+      <DependentUpon>Population Calculator.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RaceingForm.resx">
       <DependentUpon>RaceingForm.vb</DependentUpon>

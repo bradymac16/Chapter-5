@@ -31,4 +31,9 @@
         Dim Box = New Distance_Calculator
         Box.Show()
     End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim Box = New Population_Calculator
+        Box.Show()
+    End Sub
 End Class

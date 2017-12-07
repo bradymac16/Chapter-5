@@ -23,7 +23,8 @@ Partial Class Distance_Calculator
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnCalculate = New System.Windows.Forms.Button()
-        Me.lstOutput = New System.Windows.Forms.ListBox()
+        Me.lstCalculations = New System.Windows.Forms.ListBox()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnCalculate
@@ -35,21 +36,31 @@ Partial Class Distance_Calculator
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
         '
-        'lstOutput
+        'lstCalculations
         '
-        Me.lstOutput.FormattingEnabled = True
-        Me.lstOutput.Items.AddRange(New Object() {"Hours" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "Distance Traveled", "1" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "60", "2" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "120", "3" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "180", "4" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "240", "5" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "300", "6" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "360", "7" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "420"})
-        Me.lstOutput.Location = New System.Drawing.Point(40, 29)
-        Me.lstOutput.Name = "lstOutput"
-        Me.lstOutput.Size = New System.Drawing.Size(284, 225)
-        Me.lstOutput.TabIndex = 1
+        Me.lstCalculations.FormattingEnabled = True
+        Me.lstCalculations.Items.AddRange(New Object() {" "})
+        Me.lstCalculations.Location = New System.Drawing.Point(40, 29)
+        Me.lstCalculations.Name = "lstCalculations"
+        Me.lstCalculations.Size = New System.Drawing.Size(284, 225)
+        Me.lstCalculations.TabIndex = 1
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(224, 305)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Distance_Calculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(381, 379)
-        Me.Controls.Add(Me.lstOutput)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.lstCalculations)
         Me.Controls.Add(Me.btnCalculate)
         Me.Name = "Distance_Calculator"
         Me.Text = "Distance_Calculator"
@@ -57,5 +68,6 @@ Partial Class Distance_Calculator
 
     End Sub
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
-    Friend WithEvents lstOutput As System.Windows.Forms.ListBox
+    Friend WithEvents lstCalculations As System.Windows.Forms.ListBox
+    Friend WithEvents btnExit As System.Windows.Forms.Button
 End Class

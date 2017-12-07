@@ -1,55 +1,72 @@
 ﻿Public Class Distance_Calculator
+    Dim intSpeed As Integer
+    Dim strSpeed As String
 
+    'Time in hours
+    Dim intTime As Integer
+    Dim strTime As String
+
+    'distance
+    Dim intTotal As Integer
+    Dim strDistance As String
+    'user input
+    Dim strInput As String
+    Dim intCount As Integer = 1
+    Sub mathCalc()
+        intTotal = intSpeed * intCount
+
+        'create a string to display the distance
+        strDistance = intCount.ToString() & "             " & intTotal.ToString()
+
+        'add the string to the list box
+        lstCalculations.Items.Add(strDistance)
+
+        'add 1 to the counter
+        intCount += 1
+    End Sub
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
-        Dim decDistanceTravelled As Decimal
-        Dim decNumberofHoursInput As Decimal
-        Dim decMPHSpeedInput As Decimal
-        Dim intCounter As Integer = 1
-        Dim decTotalDistance As Decimal = 0
-        Dim blnFlag As Boolean
-        Try
-            For intCounter = 1 To decNumberofHoursInput
-                decMPHSpeedInput = InputBox("Please enter your average rate speed in MPH", "Speed")
-                decNumberofHoursInput = InputBox("Please enter the number of hours you spent", "Hours")
-                If IsNumeric(decMPHSpeedInput) Or decNumberofHoursInput < 0 Then
-                    MessageBox.Show("Please enter a number greater than zero.")
+        strInput = InputBox("What is the speed in miles-per-hour?", "Enter Speed")
+        'Convert the input to a decimal
+        If Decimal.TryParse(strInput, intSpeed) Then
 
-                Else
-                    'Calculation       
-                    decDistanceTravelled = decNumberofHoursInput * decMPHSpeedInput
-                    'Listbox
-                    blnFlag = True
+            'prompt the user to enter hours
+            strInput = InputBox("What is the amount of time in hours?" & intCount.ToString(), "Enter Time")
 
-                    lstOutput.Items.Add("Vehicle Speed:" & decMPHSpeedInput.ToString & "MPH" & "Time Travelled:" & ControlChars.CrLf _
-        & decNumberofHoursInput.ToString & "hours" & ControlChars.CrLf & "Hours" & "Distance Travelled" & ControlChars.CrLf _
-        & "******************************************")
-                    Do While decNumberofHoursInput > 1
-                        decNumberofHoursInput = decNumberofHoursInput - 1
-                    Loop
-                    Do While blnFlag = True
-                        lstOutput.Items.Add(decNumberofHoursInput.ToString)
-                        blnFlag = False
-                    Loop
-                End If
-                'If IsNumeric(decNumberofHoursInput) And IsNumeric(decMPHSpeedInput) Then
-                '    If decNumberofHoursInput < 0 Then
-                '        MessageBox.Show("Please enter a number greater than zero.")
-                '    Else
-                '        decDistanceTravelled = decNumberofHoursInput * decMPHSpeedInput
+            'Convert the input to a decimal
+            If Decimal.TryParse(strInput, intTime) Then
 
-                '    End If
-                'End If
-                'Output
-                If intCounter = decNumberofHoursInput Then
-                    lstOutput.Items.Add("Total Distance: " & decTotalDistance.ToString)
-                End If
-            Next
-        Catch ex As Exception
-        End Try
+                'create a string to display the speed and time
+                strSpeed = "Vehicle Speed: " & intSpeed.ToString() & " MPH"
+                strTime = "Time Traveled: " & intTime.ToString() & " hours"
+
+                'insert speed and time to list box
+                lstCalculations.Items.Insert(0, strSpeed)
+                lstCalculations.Items.Insert(1, strTime)
+
+                'create a heading
+                lstCalculations.Items.Insert(2, "Hours" & "     " & "Distance Traveled")
+
+                'insert a line
+                lstCalculations.Items.Insert(3, "______________________")
+
+
+
+                'Calculate the distance
+                Do Until intCount > intTime
+                    mathCalc()
+                Loop
+
+                'add total distance
+                lstCalculations.Items.Add("Total Distance: " & intSpeed * intTime)
+
+            End If
+
+        End If
+
 
     End Sub
 
-    Private Sub lstOutput_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstOutput.SelectedIndexChanged
-
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
     End Sub
 End Class
