@@ -30,6 +30,7 @@ Partial Class Menu
         Me.btnDistanceCalculator = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnRandomNumberGuessingGame = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnRock
@@ -104,11 +105,21 @@ Partial Class Menu
         Me.Button3.Text = "Random Number Game"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'btnRandomNumberGuessingGame
+        '
+        Me.btnRandomNumberGuessingGame.Location = New System.Drawing.Point(70, 251)
+        Me.btnRandomNumberGuessingGame.Name = "btnRandomNumberGuessingGame"
+        Me.btnRandomNumberGuessingGame.Size = New System.Drawing.Size(136, 60)
+        Me.btnRandomNumberGuessingGame.TabIndex = 8
+        Me.btnRandomNumberGuessingGame.Text = "Random Number Guessing Game"
+        Me.btnRandomNumberGuessingGame.UseVisualStyleBackColor = True
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(284, 323)
+        Me.Controls.Add(Me.btnRandomNumberGuessingGame)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnDistanceCalculator)
@@ -130,4 +141,5 @@ Partial Class Menu
     Friend WithEvents btnDistanceCalculator As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnRandomNumberGuessingGame As System.Windows.Forms.Button
 End Class

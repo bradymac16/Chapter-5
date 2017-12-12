@@ -36,4 +36,9 @@
         Dim Box = New Population_Calculator
         Box.Show()
     End Sub
+
+    Private Sub btnRandomNumberGuessingGame_Click(sender As Object, e As EventArgs) Handles btnRandomNumberGuessingGame.Click
+        Dim Box = New Random_Number_Guessing_Game_Enhancement
+        Box.Show()
+    End Sub
 End Class

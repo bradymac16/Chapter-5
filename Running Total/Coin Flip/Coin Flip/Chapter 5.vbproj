@@ -115,6 +115,12 @@
     <Compile Include="Randm Number Game.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Random Number Guessing Game Enhancement.Designer.vb">
+      <DependentUpon>Random Number Guessing Game Enhancement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Random Number Guessing Game Enhancement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RockPaperScissors.Designer.vb">
       <DependentUpon>RockPaperScissors.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Random Number Guessing Game Enhancement.resx">
+      <DependentUpon>Random Number Guessing Game Enhancement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RockPaperScissors.resx">
       <DependentUpon>RockPaperScissors.vb</DependentUpon>
